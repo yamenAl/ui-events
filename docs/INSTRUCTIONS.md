@@ -1,5 +1,5 @@
 
-# Fix the Flow - User Interface Events
+# User Interface Events
 
 Een oefening in ui-events waarin je experimenteert met muis, keyboard, touch én apparaat interactie en de afhandeling daarvan door middel van JavaScript.
 
