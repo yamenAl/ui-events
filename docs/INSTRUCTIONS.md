@@ -66,7 +66,7 @@ Voeg je schetsen toe als comment op je issue, beschrijf de interactie die je wil
 
 ### Bouwen
 
-Implementeer de interactie door `/assets/script/main.js` en `/assets/style/style.css` aan te vullen met jouw code. Denk telkens na over nieuwe namen voor CSS classes en variabelen in JS, zodat je eerder gemaakte code niet breekt!
+Implementeer de interactie door `main.js` en `style.css` aan te vullen met jouw code. Denk telkens na over nieuwe namen voor CSS classes en variabelen in JS, zodat je eerder gemaakte code niet breekt!
 
 #### In HTML & CSS
 
