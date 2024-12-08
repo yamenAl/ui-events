@@ -1,4 +1,7 @@
-> _Fork_ deze deeltaak en ga aan de slag. De instructie vind je in: [docs/INSTRUCTIONS.md](docs/INSTRUCTIONS.md)
+Verschillende User Interface events uitproberen met het JavaScript 3 stappenplan en CSS animaties. 
+
+De instructies van deze opdracht staan in [docs/INSTRUCTIONS.md](https://github.com/fdnd-task/ui-events/blob/main/docs/INSTRUCTIONS.md).
+
 
 # User Interface Events
 
