@@ -38,7 +38,7 @@ Je onderzoekt kort welke interactie je nu gaat maken, en denkt alvast na over ho
 
 Gebruik de bronnen hieronder om een nieuw _UI Event_ te kiezen, die je interessant lijkt, en bepaal welke van de links je die interactie laat _triggeren_. Bijvoorbeeld “Laat de eerste link bibberen als ik erop dubbelklik”.
 
-💪 Wil je meer uitdaging nadat je wat van de UI events hebt uitgeprobeerd? Ga dan eens met het ingewikkeldere `DeviceMotionEvent` aan de slag.
+💪 Wil je meer uitdaging nadat je wat van de UI events hebt uitgeprobeerd? Probeer dan zelf een _long press_ `CustomEvent` te maken, maak een _drag & drop_ interactie met `DragEvent`, of ga eens met het ingewikkeldere `DeviceMotionEvent` aan de slag.
 
 Maak een nieuw issue aan op jouw ui-events repository, en geef deze de titel van je UI event, het linkje dat deze triggert, en de interactie (bijvoorbeeld “Dubbelklik event op 1e link laat deze bibberen”). Link naar specifieke bronnen die je denkt nodig te hebben.
 
