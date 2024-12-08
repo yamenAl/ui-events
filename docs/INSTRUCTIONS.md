@@ -5,39 +5,93 @@ Een oefening in ui-events waarin je experimenteert met muis, keyboard, touch én
 
 ## Context
 
-Deze deeltaak hoort bij sprint 5 Fix the Flow. Dit is een deeltaak die je individueel uitvoert en waarmee je een checkpoint bij je docent haalt.
+Deze deeltaak hoort bij Sprint 5 - Fix the Flow. Dit is een deeltaak die je individueel uitvoert, en waarop je feedback krijgt van docenten en mentoren.
 
 In het college S05W2-01-User-Interface-Events wordt deze opdracht uitgelegd.
 
-Deze deeltaak hoort bij de leertaak:
-- [Fix the flow - Interactive website](https://github.com/fdnd-task/fix-the-flow-interactive-website)
+Deze deeltaak hoort bij de leertaak: [Fix the flow - Interactive website](https://github.com/fdnd-task/fix-the-flow-interactive-website)
+
 
 ## Doel van deze opdracht
 
-Op websites zijn veel verschillende vormen van interactie met gebruikers mogelijk. Deze worden *UI Events* genoemd en logischerwijs heet de verzameling van al die vormen van interactie de *UI Events API*. Als frontender wordt je geacht deze API te beheersen. In onderstaande afbeelding zie je 20 verschillende elementen, aan tenminste 10 daarvan ga jij gebruikers interactie toevoegen.
+Op websites zijn veel verschillende vormen van interactie met gebruikers mogelijk. Deze worden *User Interface Events* (UI Events) genoemd. Als frontender wordt je geacht deze _events_ te beheersen. In onderstaande afbeelding zie je 20 verschillende links, aan tenminste 10 daarvan ga jij een gebruikersinteractie toevoegen.
 
 ![](screenshot.png)
 
-In deze opdracht experimenteer je met verschillende user interface events en gaandeweg leer je de mogelijkheden van de browser beter kennen.
+In deze opdracht experimenteer je met verschillende UI events en gaandeweg leer je de mogelijkheden van de browser beter kennen.
 
-## Werkwijze
 
-Omdat deze deeltaak uit maximaal 20 kleinere taken (er zijn namelijk 20 elementen!) bestaat, doorloop je telkens de development lifecycle. Je weet ondertussen dat je dit bij elke grotere opdracht meerdere malen doet.
+## Aanpak
 
-Deze opdracht gaat over alle fases van de DLC: [analyseren](#analyseren), [ontwerpen](#ontwerpen), [bouwen](#bouwen), [integreren](#integreren) en [testen](#testen).
+Fork allereerst deze repository naar jouw eigen GitHub account, en Clone deze naar je eigen computer. Zet Issues aan, publiceer de repository alvast op GitHub Pages, en zorg dat je een live link bij About hebt staan.
+
+De eerste interactie (met een _click_ event) hebben we al voor je voorgedaan: als je op het 12e linkje (“Interaction”) klikt, springt deze omhoog. Je gaat nu voor de overige links ook interacties bedenken en maken.
+
+Omdat deze deeltaak uit maximaal 19 kleinere taken (er zijn namelijk nog 19 elementen!) bestaat, doorloop je voor elke nieuwe interactie die je gaat maken de development lifecycle. Je weet ondertussen dat je dit bij elke opdracht, issue of taak meerdere malen doet. We hebben de stappen hieronder uitgeschreven.
+
 
 ### Analyseren
 
-Je onderzoekt kort welke interactie je nu gaat maken en denkt alvast na over hoe je dat zou kunnen doen.
+Je onderzoekt kort welke interactie je nu gaat maken, en denkt alvast na over hoe je dat zou kunnen doen. Bijvoorbeeld “Laat een link bibberen met CSS”.
 
-#### Aanpak
+Gebruik de bronnen hieronder om een nieuw _UI Event_ te kiezen, die je interessant lijkt, en bepaal welke van de links je die interactie laat _triggeren_. Bijvoorbeeld “Laat de eerste link bibberen als ik erop dubbelklik”.
 
-1. (Eerste keer) Fork deze repository naar jouw eigen GitHub account;
-2. Bedenk een interactie die aan de beurt is, kies het UI event waarop deze interactie moet plaatsvinden;
-3. Bepaal de stappen die je neemt bij ontwerpen, bouwen, integreren en testen. Gebruik onderstaande bronnen om grip te krijgen op wat je aan het doen bent. 
+Maak een nieuw issue aan op jouw ui-events repository, en geef deze de titel van je UI event, het linkje dat deze triggert, en de interactie (bijvoorbeeld “Dubbelklik event op 1e link laat deze bibberen”). Link naar specifieke bronnen die je denkt nodig te hebben.
 
-#### Materiaal
+#### Bronnen
 
+- [7 secrets for enhancing UX with micro-interactions @ dreamerux.com](https://www.dreamerux.com/articles/35y5fyrr4pifhbondc7r636nkvyoqg)
+- [Mouse Events in Javascript @ Kirupa](https://www.kirupa.com/html5/mouse_events_in_javascript.htm)
+- [Working with the Keyboard @ Kirupa](https://www.kirupa.com/html5/keyboard_events_in_javascript.htm)
+- [Introduction to events @ MDN](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events)
+- [UI Events @ MDN](https://developer.mozilla.org/en-US/docs/Web/API/UI_Events)
+- [DeviceMotionEvent @ MDN](https://developer.mozilla.org/en-US/docs/Web/API/DeviceMotionEvent)
+
+
+### Ontwerpen
+
+Onderzoek hoe je de interactie zou kunnen maken met CSS en JavaScript. Als je helemaal zonder ideeën zit, kunnen onderstaande bronnen helpen.
+
+Maak eerst een snelle schets van de interactie en feedback/feedforward die je de gebruiker wilt geven.
+
+Maak een breakdownschets om te onderzoeken welke JS en CSS je nodig hebt.
+
+Voeg je schetsen toe als comment op je issue, beschrijf de interactie die je wilt maken, en link naar bronnen die je gebruikt hebt of gaat gebruiken.
+
+#### Bronnen
+
+- [Interactions: thinking & sketching them. @ UX-Planet](https://uxplanet.org/interactions-thinking-sketching-them-f3d4c1d11149)
+- [How to Apply Disney’s 12 Principles of Animation to UI Design @ interaction-design.org](https://www.interaction-design.org/literature/article/ui-animation-how-to-apply-disney-s-12-principles-of-animation-to-ui-design)
+
+
+### Bouwen
+
+Implementeer de interactie door `/assets/script/main.js` en `/assets/style/style.css` aan te vullen met jouw code. Denk telkens na over nieuwe namen voor CSS classes en variabelen in JS, zodat je eerder gemaakte code niet breekt!
+
+#### In HTML & CSS
+
+Voeg tijdelijk een nieuwe class, die de interactie goed beschrijft (bijvoorbeeld `class="bibberen"`), toe aan een HTML element;
+
+Schrijf in CSS de regels om de interactie werkend te maken.
+
+Haal de tijdelijke class weer weg uit de HTML.
+
+#### In JavaScript
+
+Bedenk een naam die nog niet in gebruik is en _declareer_ die met `let` (bijvoorbeeld `let bibberLink`).
+
+Selecteer het juiste element uit de DOM met behulp van `document.querySelector()` en bewaar die in de variabele die je net gemaakt hebt.
+
+Gebruik `addEventListener()` om een event aan een element te koppelen, en gebruik hiervoor het event dat je hebt uitgezocht (bijvoorbeeld `dblclick`).
+
+Gebruik `classList.toggle()` om een andere class aan een element toe te voegen in de _callback functie_ (bijvoorbeeld `bibberLink.classList.toggle('bibberen')`.
+
+ProTip: Gebruik bij elke stap `console.log()` om te controleren of alles werkt zoals je verwacht dat het werkt.
+
+#### Bronnen
+
+- [Keyframe animaties @ MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes)
+- [Animations @ web.dev](https://web.dev/learn/css/animations)
 - Video: [… if you only know one thing about JavaScript … @ CSS-Tricks](https://css-tricks.com/video-screencasts/150-hey-designers-know-one-thing-javascript-recommend/)
 - Guide: [Mouse Events in Javascript @ Kirupa](https://www.kirupa.com/html5/mouse_events_in_javascript.htm)
 - Guide: [Working with the Keyboard @ Kirupa](https://www.kirupa.com/html5/keyboard_events_in_javascript.htm)
@@ -47,79 +101,43 @@ Je onderzoekt kort welke interactie je nu gaat maken en denkt alvast na over hoe
 - Reference: [UI Events @ MDN](https://developer.mozilla.org/en-US/docs/Web/API/UI_Events)
 - Reference: [DeviceMotionEvent @ MDN](https://developer.mozilla.org/en-US/docs/Web/API/DeviceMotionEvent)
 
-### Ontwerpen
-
-Onderzoek hoe je de interactie zou kunnen maken met CSS en JavaScript. Als je helemaal zonder ideeën zit kunnen onderstaande bronnen helpen.
-
-#### Aanpak
-
-1. Maak eerst een snelle schets van de interactie en feedback/forward die je de gebruiker wilt geven;
-3. Maak een breakdown om te onderzoeken welke JS en CSS je nodig hebt.
-
-#### Materiaal
-
-- [Interactions: thinking & sketching them. @ UX-Planet](https://uxplanet.org/interactions-thinking-sketching-them-f3d4c1d11149)
-- [How to Apply Disney’s 12 Principles of Animation to UI Design @ interaction-design.org](https://www.interaction-design.org/literature/article/ui-animation-how-to-apply-disney-s-12-principles-of-animation-to-ui-design)
-
-### Bouwen
-
-Implementeer de interactie door `/assets/script/main.js` en `/assets/style/style.css` aan te vullen met jouw code. N.B.: Denk telkens na over een nieuwe `.class` en variabelen namen zodat je eerder gemaakte code niet breekt!
-
-#### Aanpak
-
-##### In HTML & CSS
-
-1. Voeg tijdelijk een nieuwe class die de interactie goed beschrijft (bijvoorbeeld *bibberen*) toe aan een HTML element;
-2. Schrijf in CSS de regels om de interactie werkend te maken;
-3. Haal de tijdelijke class weer weg uit de HTML.
-
-##### In JavaScript
-
-1. Bedenk een naam die nog niet in gebruik is en declareer die met `let`;
-2. Selecteer met JavaScript het juiste element uit de DOM met behulp van `document.querySelector()`;
-3. Gebruik in JavaScript `naam.addEventListener()` om een event aan een element te koppelen;
-4. Gebruik in JavaScript `naam.classList.toggle()` om een andere class aan een element toe te voegen.
-
-ProTip: Gebruik bij elke stap `console.log()` om te controleren of alles werkt zoals je verwacht dat het werkt.
 
 ### Integreren
 
-Voer een commit uit op jouw GitHub met de interactie die je zojuist geïmplementeerd hebt. Op deze manier kan je altijd terug naar een versie waarvan je weet dat alles in orde was.
+Commit jouw code met de interactie die je zojuist geïmplementeerd hebt, en noem in je commit message je interactie en het issue nummer waar je aan werkt (bijvoorbeeld “Bibberen als ik dubbelklik (#1)”.
 
-#### Aanpak
+Push daarna je code naar GitHub.
 
-1. Voer in GitHub Desktop een commit message in, gebruik de naam van de interactie die je zojuist geïmplementeerd hebt;
-2. Verstuur de commit naar GitHub door te pushen;
-3. Beschrijf in de wiki hoe je het implementeren van deze interactie hebt aangepakt. Beschrijf ook wat er heel goed ging en wat lastig was;
-4. Voeg eventueel bronnen toe die je gebruikt hebt;
 
 ### Testen
 
 Test in een browser of de versie die je net online gezet hebt ook via GitHub Pages werkt.
 
-#### Aanpak
+Open jouw repository via de directe link en check of alles werkt.
 
-1. Open jouw repository via de directe link;
-2. Check of alles werkt;
-3. Vergelijk jouw implementatie even met een klasgenoot;
-4. Schrijf heel kort op wat je opviel bij het testen.
+Laat jouw interactie ook testen door een klasgenoot.
+
+Schrijf als reactie op je issue heel kort op wat je opviel bij het testen.
+
+Sluit daarna het issue, en ga door met de volgende interactie (door opnieuw te Analyseren).
+
 
 ## Definition of done
 
 Deze opdracht is done als:
 
 - [ ] Je hebt minstens tien interactie experimenten in code geïmplementeerd;
-- [ ] Alle schetsen voor interacties zijn opgenomen in je wiki;
+- [ ] Alle schetsen voor interacties zijn opgenomen in je issues;
 - [ ] Bij elke schets staat een korte beschrijving van de interactie;
 - [ ] Bij elke schets staat een korte uitleg hoe je code werkt;
 - [ ] Je werk is te bekijken via GitHub Pages;
 
-(extra credits!)
+(Extra credits!)
 
 - [ ] Je hebt interactie experimenten voor alle twintig elementen geïmplementeerd;
 - [ ] Je hebt ingewikkelde device-orientation events geïmplementeerd;
 
-(eeuwige roem)
+(Eeuwige roem!!)
 
 - [ ] Je hebt een shake interactie geïmplementeerd waarmee alle elementen in het scherm naar beneden vallen;
 - [ ] De shake interactie werkt in zowel landscape als portrait oriëntatie.
