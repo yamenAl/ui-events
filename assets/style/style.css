@@ -31,11 +31,12 @@ a {
   border-radius: var(--pill);
   font-weight: normal;
   text-decoration: none;
+  &:hover, &:focus {
+    color: var(--primary);
+    border-color: var(--primary);
+  }
 }
-a:hover {
-  color: var(--primary);
-  border-color: var(--primary);
-}
+
 
 /* UI Event Classes */
 
@@ -79,4 +80,4 @@ a:nth-of-type(12) {
 }
 
 
-/* Jouw animaties */
+/* Hieronder komen jouw animaties */
