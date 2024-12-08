@@ -3,13 +3,9 @@
 
 Een oefening in ui-events waarin je experimenteert met muis, keyboard, touch én apparaat interactie en de afhandeling daarvan door middel van JavaScript.
 
-## Context
-
-Deze deeltaak hoort bij Sprint 5 - Fix the Flow. Dit is een deeltaak die je individueel uitvoert, en waarop je feedback krijgt van docenten en mentoren.
-
 In het college S05W2-01-User-Interface-Events wordt deze opdracht uitgelegd.
 
-Deze deeltaak hoort bij de leertaak: [Fix the flow - Interactive website](https://github.com/fdnd-task/fix-the-flow-interactive-website)
+
 
 
 ## Doel van deze opdracht
