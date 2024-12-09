@@ -88,7 +88,7 @@ Gebruik `classList.toggle()` om een andere class aan een element toe te voegen i
 
 ProTip: Gebruik bij elke stap `console.log()` om te controleren of alles werkt zoals je verwacht dat het werkt.
 
-💪 Wat meer uitdaging nodig nadat je keyframe animaties hebt uitgespeeld? Kijk ook eens of je bijvoorbeeld een geluid af kunt spelen, de browser fullscreen kunt krijgen, of de pagina kunt delen.
+💪 Wat meer uitdaging nodig nadat je keyframe animaties hebt uitgespeeld? Kijk ook eens of je bijvoorbeeld een geluid af kunt spelen, de browser fullscreen kunt krijgen, of de pagina kunt delen. Of een View Transition af kunt vuren (meer hierover dinsdag bij de JS challenge).
 
 #### Bronnen
 
